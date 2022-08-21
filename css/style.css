@@ -10,24 +10,20 @@
 }
 
 body {
-    /* height: 9000px; */
     font-family: 'Mulish', sans-serif, Arial, Helvetica;
-
 }
 
 .container {
-    width: 1140px;
+    width: 1170px;
     margin: auto;
 }
 
 .slider {
     width: 100%;
     height: 874px;
-    /* background-image: url(../images/slide1.jpg); */
     background-size: cover;
     position: relative;
     user-select: none;
-
 }
 
 .slider>i {
@@ -68,7 +64,6 @@ body {
     transition: 1s;
 }
 
-
 .slider .container {
     color: #fff;
 }
@@ -100,6 +95,7 @@ body {
     line-height: 27px;
     font-size: 18px;
 }
+
 
 .slider .container>div {
     width: 100%;
@@ -817,15 +813,11 @@ body {
     font-weight: lighter;
 }
 
-
-
-
-
 .make-site .slide {
     width: 100%;
     height: 465px;
-    /* margin-top: 50px; */
     overflow: hidden;
+    display: flex;
 
 }
 
@@ -853,55 +845,47 @@ body {
 }
 
 
-.make-site .slide > div.active {
+.make-site .slide>div.active {
     margin-right: 30px;
 }
 
-.make-site .slide > div img {
+.make-site .slide>div img {
     width: 100%;
     height: 100%;
 }
 
 
-.make-site .slide > div .pp {
-    width: 250px;
+.make-site .slide>div .pp {
+    width: 90%;
     height: 133px;
-    background-color: #fff;
     position: absolute;
-    z-index: 2;
-    left: 53px;
+    left: 50%;
     top: 230px;
+    transform: translateX(-50%);
+    z-index: 2;
     border-radius: 5px;
     text-align: center;
     display: none;
     opacity: 0.2;
-    /* transition: 1s; */
+    background-color: #fff;
 }
 
 
 .make-site .slide .active:hover .pp {
-display: block;
-/* transition: .5s; */
-animation-name: toup;
-animation-duration: 0.2s;
-animation-iteration-count: 1;
-animation-timing-function: linear;
-/* transform: translateY(-100px); */
-animation-fill-mode: forwards;
+    display: block;
+    animation-name: toup;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
 }
 
 
-@keyframes toup{
-    /* 0%{
-        top: 50%;
-    } */
-    100%{
-        transform: translateY(-65px);
+@keyframes toup {
+    100% {
+        transform: translateX(-50%) translateY(-65px);
         opacity: 1;
     }
-     /* 100%{
-        top: calc(50% - 100px);
-    } */
 }
 
 
