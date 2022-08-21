@@ -96,7 +96,6 @@ body {
     font-size: 18px;
 }
 
-
 .slider .container>div {
     width: 100%;
     height: 57px;
@@ -126,7 +125,6 @@ body {
     height: 19px;
     margin-top: 19px;
     line-height: 17px;
-
     font-size: 17px;
 }
 
@@ -147,13 +145,11 @@ body {
     height: 100px;
     float: left;
     margin: 0 50px;
-    /* animation-name: borderanim1; */
 }
 
 .ring2 {
     width: 75px;
     height: 75px;
-    /* box-shadow: 0px 0px 0px 15px rgb(164, 82, 82); */
     animation-name: borderanim2;
     background-color: rgba(255, 255, 255, 0.25);
 
@@ -162,28 +158,22 @@ body {
 .ring3 {
     width: 50px;
     height: 50px;
-    /* box-shadow: 0px 0px 0px 3px rgba(255, 255, 255, 0.75); */
     animation-name: borderanim3;
     background-color: rgba(255, 255, 255, 0.5);
-
 }
 
 .ring4 {
     width: 25px;
     height: 25px;
-    /* box-shadow: 0px 0px 0px 3px rgba(255, 255, 255, 1); */
     animation-name: borderanim3;
     text-align: center;
-    /* background-color: #fff; */
     background-color: rgba(255, 255, 255, 0.75);
-
 }
 
 @keyframes borderanim1 {
     0% {
         box-shadow: 0px 0px 0px 3px rgba(255, 255, 255, 0.20)
     }
-
 
     100% {
         box-shadow: 0px 0px 0px 12.5px rgba(255, 255, 255, 0)
@@ -295,14 +285,40 @@ body {
     margin: 100px 0 100px 0;
     width: 100%;
     height: 708px;
-
 }
 
-.experience img {
+.experience .image {
     width: 570px;
     height: 688px;
     margin-right: 55px;
     float: left;
+    position: relative;
+}
+
+.experience img {
+    position: absolute;
+}
+
+.experience img:first-of-type {
+    width: 450px;
+    height: 450px;
+    left: -90px;
+    top: 47%;
+    animation-name: updown;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+@keyframes updown {
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+.experience img:last-of-type {
+    z-index: 1;
 }
 
 .experience .experience1 {
@@ -315,7 +331,6 @@ body {
     color: var(--maincolor);
     line-height: 18px;
     font-size: 15px;
-
 }
 
 .experience .experience1>h1 {
@@ -327,7 +342,6 @@ body {
 
 .experience .experience1>h1 span {
     color: var(--maincolor);
-
 }
 
 .experience .experience1>span {
@@ -411,7 +425,6 @@ body {
 
 .experience1>span:last-of-type:hover {
     background-color: var(--hovercolor);
-
 }
 
 .solution {
@@ -461,7 +474,6 @@ body {
 }
 
 .solution .container .cards .card {
-    /* display: inline-block; */
     float: left;
     width: 265px;
     height: 267px;
@@ -469,8 +481,6 @@ body {
     padding: 25px 15px;
     background-color: #3A1E71;
     overflow: hidden;
-
-
 }
 
 .solution .container .cards .card .cover {
@@ -492,7 +502,6 @@ body {
     width: 100%;
     line-height: 24px;
     font-size: 20px;
-    /* text-align: center; */
     font-weight: bold;
     text-transform: capitalize;
 }
@@ -531,7 +540,6 @@ body {
     height: 217px;
     margin-top: 45px;
     background-color: #B358DB;
-
 }
 
 .numbers div {
@@ -540,7 +548,6 @@ body {
     height: 105px;
     margin-top: 40px;
     text-align: center;
-
 }
 
 .numbers h2 {
@@ -623,7 +630,6 @@ body {
     grid-template-columns: auto auto;
     grid-template-rows: auto auto auto;
     gap: 30px 30px;
-
 }
 
 .services .service {
@@ -633,24 +639,12 @@ body {
     border: 2px dotted #DCCFF5;
 }
 
-/* .services .shadow {
-    width: 100%;
-    height: 188px;
-    
-} */
 .services .service:hover {
     transform: translateY(-8px);
     border: none;
     box-shadow: 0 0 10px 5px #F4F4F4;
     transition: 0.5s;
 }
-
-/* .services .shadow:hover {
-    margin-top: -8px;
-    border: none;
-    box-shadow: 0 0 10px 5px #F4F4F4;
-    transition: 0.5s;
-} */
 
 .services .service .num {
     width: 120px;
@@ -687,7 +681,6 @@ body {
     right: -15px;
     border-radius: 50%;
     background-color: #fff;
-
 }
 
 .services .service h4 {
@@ -704,7 +697,6 @@ body {
     font-size: 16px;
     margin-bottom: 30px;
     text-transform: capitalize;
-
 }
 
 .services .service>span {
@@ -717,9 +709,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
     cursor: pointer;
-
 }
-
 
 /* make-site */
 .backgrnd {
@@ -739,7 +729,6 @@ body {
     font-size: 35px;
     font-weight: normal;
     text-transform: capitalize;
-
 }
 
 .backgrnd span {
@@ -758,7 +747,6 @@ body {
 
 .backgrnd span:hover {
     background-color: var(--hovercolor);
-
 }
 
 .backgrnd p {
@@ -818,7 +806,6 @@ body {
     height: 465px;
     overflow: hidden;
     display: flex;
-
 }
 
 .make-site .slide>div {
@@ -844,7 +831,6 @@ body {
     transition: 0.4s;
 }
 
-
 .make-site .slide>div.active {
     margin-right: 30px;
 }
@@ -853,7 +839,6 @@ body {
     width: 100%;
     height: 100%;
 }
-
 
 .make-site .slide>div .pp {
     width: 90%;
@@ -880,15 +865,12 @@ body {
     animation-fill-mode: forwards;
 }
 
-
 @keyframes toup {
     100% {
         transform: translateX(-50%) translateY(-65px);
         opacity: 1;
     }
 }
-
-
 
 .make-site .slide>div div h2 {
     width: 100%;
@@ -910,7 +892,6 @@ body {
     line-height: 24px;
     font-size: 16px;
     font-weight: bold;
-
 }
 
 .make-site .but {
@@ -919,7 +900,6 @@ body {
     height: 24px;
     margin-top: 36px;
     margin-left: calc(50% - 36px);
-    /* background-color: #8430CB; */
 }
 
 .make-site .but button {
@@ -956,15 +936,12 @@ body {
     color: var(--maincolor);
 }
 
-
 .testimonial .container>h1 {
     text-align: center;
     line-height: 47px;
     font-size: 39px;
     text-transform: capitalize;
-    /* color: var(--maincolor); */
 }
-
 
 .testimonial .container>div {
     display: inline-block;
@@ -1015,7 +992,6 @@ body {
     height: 24px;
     margin-top: 36px;
     margin-left: calc(50% - 36px);
-    /* background-color: #8430CB; */
 }
 
 .testimonial .but button {
@@ -1036,7 +1012,6 @@ body {
 .testimonial .but button:last-of-type {
     width: 25px;
 }
-
 
 /* technology */
 .technology {
@@ -1095,7 +1070,6 @@ body {
 }
 
 /* articles */
-
 .articles {
     text-align: center;
     color: #000;
@@ -1138,7 +1112,6 @@ body {
     overflow: hidden;
     border-radius: 15px;
     position: relative;
-
 }
 
 .articles .card div {
@@ -1156,7 +1129,6 @@ body {
     border-radius: 15px;
     margin-bottom: 30px;
     cursor: pointer;
-
 }
 
 .articles .card div span:first-of-type {
@@ -1221,7 +1193,6 @@ body {
     line-height: 19px;
     font-size: 14px;
     padding: 4px 10px;
-
     z-index: 2;
     display: inline-block;
     background-color: var(--maincolor);
@@ -1229,14 +1200,11 @@ body {
     cursor: pointer;
 }
 
-
 .articles .but {
     display: inline-block;
     width: 72px;
     height: 24px;
     margin-top: 36px;
-    /* margin-left: calc(50% - 36px); */
-    /* background-color: #8430CB; */
 }
 
 .articles .but button {
@@ -1258,44 +1226,6 @@ body {
     width: 25px;
     background-color: #BFCADC;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .mover {
     width: 90px;
@@ -1323,17 +1253,13 @@ body {
 
 @keyframes animation-mover {
     100% {
-        /* left: 100%; */
         transform: translateX(90px);
     }
 }
-
 a {
     text-decoration: none;
     color: #fff;
 }
-
-
 
 .clearfix {
     clear: both;
